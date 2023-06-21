@@ -1,0 +1,4 @@
+<launch>
+  <!-- Show in Rviz   -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find b31ys_launcher)/rviz/rosbot.rviz" required="true" output="screen"/>
+</launch>

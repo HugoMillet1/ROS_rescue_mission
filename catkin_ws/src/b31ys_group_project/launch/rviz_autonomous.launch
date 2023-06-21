@@ -1,0 +1,16 @@
+<launch>
+    <include file="$(find search_and_rescue)/launch/search_and_rescue.launch"/>
+    <include file="$(find b31ys_group_project)/launch/my_map.launch"/>
+    <!-- Start rviz with a pre-configured presentation -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find b31ys_group_project)/launch/rviz_param.rviz"/>    
+    
+    <include file="$(find b31ys_group_project)/launch/move_base.launch"/>
+    <include file="$(find explore_lite)/launch/explore.launch"/>
+
+    <include file="$(find b31ys_group_project)/launch/objdect_3d.launch"/>
+    <node pkg="b31ys_group_project" type="object_processing.py" name="image_processing"/> 
+    
+    <!--
+    -->
+
+</launch>
